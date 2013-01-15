@@ -1,0 +1,44 @@
+<html>
+<head>
+<script type="text/javascript" src="lib/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="src/plugin.js"></script>
+<script type="text/javascript" src="src/animation.js"></script>
+<title>Click on the boxes to make them disappear!</title>
+</head>
+<body>
+
+	<div id="parent" align="center">
+		<div id="child1"
+			style="width: 50px; text-align: center; font-family: Verdana">box
+			1</div>
+		<div id="child2"
+			style="width: 50px; text-align: center; font-family: Verdana">box
+			2</div>
+		<div id="child3"
+			style="width: 50px; text-align: center; font-family: Verdana">box
+			3</div>
+		<div id="child4"
+			style="width: 50px; text-align: center; font-family: Verdana">box
+			4</div>
+	</div>
+
+
+	<script>
+		$(document).ready(function() {
+			$('#child1').border('3px solid red');
+
+			$('#child2').border('3px solid orange');
+
+			$('#child3').border('3px solid yellow');
+
+			$('#child4').border('3px solid green');
+
+			$("#parent").children().click(function() {
+
+				slideUpAndOut($(this));
+
+			});
+		});
+	</script>
+</body>
+</html>
